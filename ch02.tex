@@ -1,0 +1,62 @@
+
+%blankpage
+
+\chapter{Jordan Canonical Form}
+\label{ch02}
+\index{jordan canonical form@Jordan Canonical Form}%
+
+\section{The Diagonalizable Case}
+
+Although, for simplicity, most of our examples
+will be over the real numbers
+(and indeed over the rational numbers), we will consider that
+\textit{all of our vectors and matrices
+are defined over the complex numbers} $\mathbb{C}$.
+It is only with this assumption that the
+theory of Jordan Canonical Form (JCF) works
+\index{jcf@JCF}%
+completely.
+See Remark~\ref{ch02.rem1} for the key reason why.
+
+\begin{definition}
+\label{ch02.def1}
+If \(v \neq 0\) is a vector such that, for some
+$\lambda$,
+\[
+A v = \lambda v,
+\]
+then $v$ is an \textit{eigenvector} of $A$ associated
+\index{eigenvector}%
+to the \textit{eigenvalue} $\lambda$.
+\index{eigenvalue}%
+\end{definition}
+
+\begin{example}
+\label{ch02.ex1}
+Let $A$ be the matrix $A =$
+Then, as you can check, if $v_1 =$ 
+then $A v_1 = 3 v_1$, so $v_1$ is an eigenvector of $A$ with associated
+eigenvalue $3$, and if $v_2 =$ 
+then $A v_2 = -2 v_2$, so $v_2$ is
+an eigenvector of $A$ with associated eigenvalue $-2$.
+\end{example}
+
+\begin{remark}
+\label{ch02.rem1}
+This is the customary definition of the characteristic
+\index{characteristic polynomial}%
+polynomial.
+But note that, if $A$ is an $n$-by-$n$ matrix, then the matrix
+$\lambda I - A$ is obtained from the matrix $A - \lambda I$ by multiplying
+each of its $n$ rows by $-1$, and hence
+In practice, it is most convenient
+to work with $A -\lambda I$ in finding eigenvectors---this minimizes
+arithmetic---and when we come to find
+chains of generalized eigenvectors in
+Section~1.2,
+it is (almost) essential to use $A -\lambda I$, as using
+$\lambda I - A$ would introduce lots of spurious minus signs.
+\end{remark}
+
+\clearpage
+

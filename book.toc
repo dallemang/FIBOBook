@@ -1,0 +1,15 @@
+\contentsline {chapter}{\numberline {}{Preface}}{vii}{chapter*.2}
+\contentsline {chapter}{\numberline {}{Acknowledgments}}{ix}{chapter*.3}
+\contentsline {chapter}{\numberline {1}{Information Theory and Rate Distortion Theory}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}{Introduction}}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}{Entropy and Average Mutual Information}}{1}{section.1.2}
+\contentsline {chapter}{\numberline {2}{Jordan Canonical Form}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}{The Diagonalizable Case}}{5}{section.2.1}
+\contentsline {chapter}{\numberline {3}{An Algorithm}}{6}{chapter.3}
+\contentsline {chapter}{\numberline {4}{Shaded Areas}}{7}{chapter.4}
+\contentsline {chapter}{\numberline {5}{Math}}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}{Bold Math}}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}{Math Variables}}{9}{section.5.2}
+\contentsline {chapter}{\numberline {6}{Citations with Author-Year}}{11}{chapter.6}
+\contentsline {chapter}{\numberline {}{Bibliography}}{14}{chapter*.11}
+\contentsline {chapter}{\numberline {}{Author's Biography}}{15}{chapter*.12}

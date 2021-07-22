@@ -1,0 +1,111 @@
+
+%blankpage
+
+\chapter{Shaded Areas}
+\label{ch04}
+
+M\&C provides a macro called \verb+mcframe+ that allows us to
+create a frame around some text which automatically breaks its contents
+across pages. 
+
+\verb+\begin{mcframe}[width](text-width)<background-color>+\\
+
+\ldots
+
+\verb+\end{mcframe}+
+
+The optional arguments are:
+\begin{itemize}
+\item
+\verb+width+ defaults to the width of the page
+\item
+\verb+text-width+ defaults to an indent of 10pt in each margin
+\item
+\verb+background-color+ defaults to the \verb+bluetwenty+ color of the
+	M\&C books.
+\end{itemize}
+
+\blankline
+Here are a few examples using some text from the book \textit{General Game 
+Playing} by M. Genesereth and M. Thielscher that was published by M\&C in 
+March, 2014:
+
+\begin{mcframe}
+\verb+\begin{mcframe}+\\
+Games of strategy, such as Chess, couple intellectual activity with
+competition.
+We can exercise and improve our intellectual skills by playing such games.
+The competition adds excitement and allows us to
+compare our skills to those of others.
+The same motivation accounts for
+interest in Computer Game Playing as a testbed for Artificial Intelligence.
+Programs that think better should be able to win more
+games, and so we can use competitions as an evaluation technique for
+intelligent systems.
+
+Unfortunately, building programs to play specific games has limited
+value in AI.  (1)~To begin with, specialized game players are very narrow.
+They can be good at one game but not another. Deep Blue may have beaten
+the world Chess champion, but it has no clue how to play checkers.  (2)~A
+second problem with specialized game playing systems is that they do only
+part of the work. Most of the interesting analysis and design is done in
+advance by their programmers. The systems themselves might as well be
+tele-operated.
+
+All is not lost. The idea of game playing can be used to good effect
+to inspire and evaluate good work in Artificial Intelligence, but it
+requires moving more of the design work to the computer itself.
+This can be done by focussing attention on General Game Playing.\\
+\verb+\end{mcframe}+
+\end{mcframe}
+
+\begin{mcframe}[.7\textwidth](.6\textwidth)
+\verb+\begin{mcframe}[.7\textwidth](.6\textwidth)+\\
+Games of strategy, such as Chess, couple intellectual activity with
+competition.
+We can exercise and improve our intellectual skills by playing such games.
+The competition adds excitement and allows us to
+compare our skills to those of others.
+The same motivation accounts for
+interest in Computer Game Playing as a testbed for Artificial Intelligence.
+Programs that think better should be able to win more
+games, and so we can use competitions as an evaluation technique for
+intelligent systems.
+
+Unfortunately, building programs to play specific games has limited
+value in AI.  (1)~To begin with, specialized game players are very narrow.
+They can be good at one game but not another. Deep Blue may have beaten
+the world Chess champion, but it has no clue how to play checkers.  (2)~A
+second problem with specialized game playing systems is that they do only
+part of the work. Most of the interesting analysis and design is done in
+advance by their programmers. The systems themselves might as well be
+tele-operated.\\
+\verb+\end{mcframe}+
+\end{mcframe}
+
+\begin{mcframe}[.8\textwidth](.7\textwidth)<green>
+\verb+\begin{mcframe}[.8\textwidth](.7\textwidth)<green>+\\
+Games of strategy, such as Chess, couple intellectual activity with
+competition.
+We can exercise and improve our intellectual skills by playing such games.
+The competition adds excitement and allows us to
+compare our skills to those of others.
+The same motivation accounts for
+interest in Computer Game Playing as a testbed for Artificial Intelligence.
+Programs that think better should be able to win more
+games, and so we can use competitions as an evaluation technique for
+intelligent systems.
+
+Unfortunately, building programs to play specific games has limited
+value in AI.  (1)~To begin with, specialized game players are very narrow.
+They can be good at one game but not another. Deep Blue may have beaten
+the world Chess champion, but it has no clue how to play checkers.  (2)~A
+second problem with specialized game playing systems is that they do only
+part of the work. Most of the interesting analysis and design is done in
+advance by their programmers. The systems themselves might as well be
+tele-operated.\\
+\verb+\end{mcframe}+
+\end{mcframe}
+
+\clearpage
+

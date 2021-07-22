@@ -1,0 +1,105 @@
+
+%blankpage
+
+\chapter{Math}
+\label{ch05}
+
+\section{Bold Math}
+Sometimes you have a math symbol in bold to indicate, for example,
+a vector or special functions. Use \verb+\mathbf{x}+ for letters
+and \verb+\bm{\Phi}+ for Greek letters.
+
+\noindent
+\ldots
+$\bm{\Phi}$ and $\bm{\Theta}$ are the distribution functions
+governing the likelihood of $\mathcal{X}$ and $\mathbf{Z}$ \ldots
+
+\blankline
+Some notes:
+\begin{itemize}
+\item
+use \verb+\bm{\Phi}+ to produce a bold Greek symbol Phi.
+\item
+use \verb+\mathcal{X}+ to display the caligraphic letter X
+\item
+use \verb+\mathbf{Z}+ to dispaly bold non-Greek symbols
+\end{itemize}
+
+\blankline
+If you plan to use Greek symbols to identify, for example, vectors, you could
+create a macro, like
+
+\verb+\newcommand{\vect}[1]{\bm{#1}}+
+
+\newcommand{\vect}[1]{\bm{#1}}
+
+and then use
+
+\noindent
+\begin{verbatim}
+\ldots the vectors are $\vect{\Phi}$ and $\vect{\Theta}$ \ldots
+\end{verbatim}
+
+to produce
+
+\noindent
+\ldots the vectors are $\vect{\Phi}$ and $\vect{\Theta}$ \ldots
+
+\blankline
+The idea is to have macro names for different constructs.
+If you chose to use a different representation for vectors,
+you change the macro and rerun your manuscript.
+
+
+\section{Math Variables}
+
+When we have a math variable with more than one character,
+like \textit{abcd}, \LaTeX{} treats each character as a separate variable.
+With Caslon fonts, that we use to produce your book, that space is noticeable.
+
+We eliminat the extra space using \verb+\mathit+:
+
+\verb+\mathit{abcd} = 3.+
+$$
+\mathit{abcd} = 3.
+$$
+
+If we use the variable \textit{abcd} often, as in
+
+\verb|\mathit{abcd} = \mathit{abcd}^2 - \sqrt{\mathit{abcd}} + \mathit{abcd},|
+
+$$
+\mathit{abcd} = \mathit{abcd}^2 - \sqrt{\mathit{abcd}} + \mathit{abcd},
+$$
+we can create a separate macro for the variable:
+
+\verb+\newcommand{\abcd}{\mathit{abcd}}+
+\newcommand{\abcd}{\mathit{abcd}}
+
+\noindent
+Then we can use \verb+\abcd+ in the expressions:
+
+\verb|\abcd = \abcd^2 - \sqrt{\abcd} + \abcd,|
+
+$$
+\abcd = \abcd^2 - \sqrt{\abcd} + \abcd,
+$$
+
+If there is already a predefined command with the same name,
+we use instead something like \verb+Abcd+:
+
+\verb+\newcommand{\Abcd}{\mathit{abcd}}+
+\newcommand{\Abcd}{\mathit{abcd}}
+
+\noindent
+Then we can use \verb+\Abcd+ in the expressions:
+
+\verb|\Abcd = \Abcd^2 - \sqrt{\Abcd} + \Abcd.|
+
+$$
+\Abcd = \Abcd^2 - \sqrt{\Abcd} + \Abcd.
+$$
+
+
+\clearpage
+

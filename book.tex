@@ -1,0 +1,64 @@
+
+% please use TexLive 2014 or later with the M&C macros freely
+% available from tug.org or use any other recent version of LaTeX
+
+\documentclass{book}
+
+%the main style; default LibreCaslon font
+\usepackage[raggedsec]{morgan2}
+\usepackage{morgan-defs}
+
+%to use Times New Roman, instead of LibreCaslon, please uncomment the next line
+%\morgansetup{fontsetup=times}
+
+% bibliography
+\usepackage[square,comma,sort]{natbib}         % author-year
+%usepackage[square,comma,sort,numbers]{natbib} % numbered
+
+\setcounter{secnumdepth}{2}
+
+\graphicspath{{./figures/}}     % folder for the figures in your book
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks=true,linkcolor=MyDarkBlue,
+citecolor=MyDarkBlue,filecolor=MyDarkBlue,urlcolor=MyDarkBlue]{hyperref}
+
+\renewcommand{\UrlBreaks}{\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]%
+\do\)\do\,\do\?\do\&\do\'\do+\do\=\do\#%
+\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+\do\Y\do\Z}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\renewcommand{\ALG@name}{\color{black}Algorithm}
+\makeatother
+
+%\makeindex                     % if you are creating an index for your book
+
+\begin{document}
+
+ \frontmatter                   % we'll produce the fm for you; 
+    \input{fm}                  % we'll need an Abstract and Keywords
+								% please see the abs-pref folder for some pdf examples
+
+ \mainmatter                    % sample chapters
+    \input{ch01}                % various environments like theorem,
+    \input{ch02}                % example, etc.
+    \input{ch03}                % algorithm sample
+    \input{ch04}                % shaded blocks in your pages
+    \input{ch05}                % bold math and math variables
+    \input{ch06}                % bibliography using Author-Year
+
+    \input{biblio}              % bibliography
+
+ \backmatter                    % back matter
+    \input{bio}                 % author(s)'s short bio(s)
+								% please see the bios folder for some pdf examples
+
+%   \input{book.ind}            % if you have an Index
+
+\end{document}
+

@@ -1,0 +1,49 @@
+
+%blankpage
+
+\chapter{An Algorithm}
+\label{ch03}
+
+The navigation oriented heuristic ($h3$) considers the site topology.
+Accesses to cached pages are not recorded in the
+Web log due to the browser or proxy cache.
+Therefore, references to those pages are missed.
+The missing references in the log file can be found using a set of
+assumptions.
+The referrer field of the Web log or the Web site structure can be used
+to infer cached pages.
+If a requested Web page $p_i$ is not reachable
+from previously visited pages in a
+session, then a new session is constructed starting with page $p_i$.
+
+\begin{algorithm}
+\hrulefill
+
+ \textit{Input :} Web server logs \newline
+ \textit {Output :} set of user sessions
+$\mathcal{S}=\{s_{1},...,s_{M}\}$
+
+\hrulefill
+
+\begin{algorithmic}[1]
+ \STATE $\mathcal{S}=\{\emptyset\}$
+ \STATE Order all Web logs by user IDs ($u_k$) and time increasingly
+ \FORALL {user ID $u_k$}
+    \STATE Create a new user session in $\mathcal{S}$ for user $u_k$
+    \FOR {i=1 to the number of records of this $u_k$}
+    	\IF {$t_{i+1} - t_i < \triangle t$}
+    		\STATE insert this record into user session
+    	\ELSE
+    		\STATE Create a new user session in $\mathcal{S}$ for user $u_k$
+    	\ENDIF
+    \ENDFOR
+ \ENDFOR
+\end{algorithmic}
+\hrulefill
+ \caption{Construction of user sessions from Web server logs using $h1$
+ heuristic}
+\label{alg:visitingTimeAlg}
+\end{algorithm}
+
+\clearpage
+
