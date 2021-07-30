@@ -114,11 +114,18 @@ At the enterprise level, the situation is more complex.  That same legal entity 
 \begin{figure}[hbt] % 01
 \centering
   \includegraphics[width=3.3in]{figures/id-table.jpg}
-\caption{Representing identifiers as character fields.  Some fields are standard IDs ( }
+\caption{Representing identifiers as character fields.  Some fields are standard IDs (SEC, TIN, EIN, LEI and DUNS), others are particular to this enterprise data system (JENIE, SYSID, CUSTNO) }
 \label{ch01.fig3} 
 \end{figure}
 
 Another way to represent this, as shown in Figure \ref{ch01.fig4} is to have a separate entity for the identifier;  the identifier would have a type (SEC, EIN, TIN, LEI, etc.), and a value (probably a string).  It would also point to the entity that it identifies; in this way, any number of identifiers for a legal entity are possible.  Even in enterprise systems with a hundred identifiers, this isn't a common way to represent identifiers for legal entities; it doesn't lend itself well to supporting application code.  
+
+\begin{figure}[hbt] % 01
+\centering
+  \includegraphics[width=3.3in]{figures/id-entity.jpg}
+\caption{Representing identifiers as entities in their own right.  }
+\label{ch01.fig4} 
+\end{figure}
 
 At an industrial level, FIBO has to be able to manage any number of identifiers, including the hundreds that appear at the enterprise level, and indeed, all of these identifiers for all enterprises.  This is where FIBO needs to anticipate the data structures in enterprises that it hasn't seen yet; will a new enterprise have an identifier that we haven't seen before?  Since we haven't seen that enterprise yet, we don't really know for sure, but it is a pretty good bet (given that the ones we have seen already have a hundred such identifiers!), that there will be new ones.  FIBO has to anticipate what it will see in these new enterprise data structures; the smart money says to expect there to be more identifiers thant we have heard of. 
 
