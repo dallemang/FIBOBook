@@ -111,6 +111,13 @@ Many banks are also stockbrokers; suppose the bank wants to provide a mobile app
 
 At the enterprise level, the situation is more complex.  That same legal entity has a credit rating given by various agencies (Reuters, Fitch, etc.).  It is also involved in AML/KYC data, which include the legal hierarchy (various companies that are owned by a conglomerate holding company).  Each of these systems has an identifier for the legal entity; since the bank itself is a conglomerate formed by the merger of several banks and brokerage firms, each of them had its own way of tracking these entities.  The enterprise architecture of the bank will include multiple identifiers, inherited from the data systems from the original banks.  There are a number of ways to do this; one way (and probably the most common), as shown in Figure \ref{ch01.fig3}, is to have a set of fields, one  for each identifier.  A legal entity would have a field for the SEC, the TIN, EIN, LEI, and separate fields for the bespoke identifiers that the company uses that aren't shared outside the firm.  In one example, there were over a hundred distinct identifiers that were used to identify a legal entity!  
 
+\begin{figure}[hbt] % 01
+\centering
+  \includegraphics[width=3.3in]{figures/id-table.jpg}
+\caption{Representing identifiers as character fields.  Some fields are standard IDs ( }
+\label{ch01.fig3} 
+\end{figure}
+
 Another way to represent this, as shown in Figure \ref{ch01.fig4} is to have a separate entity for the identifier;  the identifier would have a type (SEC, EIN, TIN, LEI, etc.), and a value (probably a string).  It would also point to the entity that it identifies; in this way, any number of identifiers for a legal entity are possible.  Even in enterprise systems with a hundred identifiers, this isn't a common way to represent identifiers for legal entities; it doesn't lend itself well to supporting application code.  
 
 At an industrial level, FIBO has to be able to manage any number of identifiers, including the hundreds that appear at the enterprise level, and indeed, all of these identifiers for all enterprises.  This is where FIBO needs to anticipate the data structures in enterprises that it hasn't seen yet; will a new enterprise have an identifier that we haven't seen before?  Since we haven't seen that enterprise yet, we don't really know for sure, but it is a pretty good bet (given that the ones we have seen already have a hundred such identifiers!), that there will be new ones.  FIBO has to anticipate what it will see in these new enterprise data structures; the smart money says to expect there to be more identifiers thant we have heard of. 
